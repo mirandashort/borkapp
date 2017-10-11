@@ -1,5 +1,3 @@
-# form output
-
 <html>
   <head>
     <title>Bork Generator</title>
@@ -10,9 +8,15 @@
      Initializing bork... <em style="color: #45b1e2;">
     </h1>
 
-    <h2>
-    <%= bork(doggo_type) %>
-    </h2>
+    <form accept-charset="UTF-8" action="/bork/me/" method="get">
+      <input name="utf8" type="hidden" value="&#x2713;" />
+      <input name="bork_type" type="hidden" />
+    </form>
+
+    <p>
+    <%= response %>
+    </p>
+
 
   </body>
 </html>

@@ -1,8 +1,12 @@
 class Form
   attr_reader :doggo_type
+  attr_reader :bork_type
+  attr_reader :response
 
   def initialize
     @doggo_type = "doggo_type"
+    @bork_type = "bork_type"
+    @response = "response"
   end
 
 # writing my own function
