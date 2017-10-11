@@ -1,4 +1,4 @@
-class Form 
+class Form
   attr_reader :doggo_type
 
   def initialize
@@ -26,6 +26,8 @@ class Form
           bork_type = "cat's don't bork you fucking idiot"
     elsif doggo_type == ""
       bork_type = "nothing, you didn't bork"
+    else
+      bork_type == "i don't know that bork"
     end
     response = "Your bork sounds like this: #{bork_type} \n"
     puts response
@@ -36,5 +38,5 @@ class Form
 
     puts "Initializing bork..."
     bork(doggo_type)
-  end
+
 end
