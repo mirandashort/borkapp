@@ -23,11 +23,17 @@ class Form
     elsif doggo_type == "wolf doggo"
          bork_type = "howwwlllll"
     elsif doggo_type == "cato"
-          bork_type = "cat's don't bork you fucking idiot"
+        bork_type = "cat's don't bork you fucking idiot"
     elsif doggo_type == ""
-      bork_type = "nothing, you didn't bork"
+        bork_type = "sry wut? i didn't hear your bork"
     else
-      bork_type == "i don't know that bork"
+        bork_type = "sry i don't know that bork"
+    end
+
+    if bork_type == "sry i didn't hear your bork" || bork_type == "sry i don't know that bork"
+        response = "#{bork_type} \n"
+    else
+      response = "Your bork sounds like this: #{bork_type} \n"
     end
     response = "Your bork sounds like this: #{bork_type} \n"
     puts response
