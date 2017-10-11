@@ -27,7 +27,7 @@ class Form
     elsif doggo_type == "wolf doggo"
          bork_type = "howwwlllll"
     elsif doggo_type == "cato"
-        bork_type = "cat's don't bork you fucking idiot"
+        bork_type = "cat's don't bark you fucking idiot"
     elsif doggo_type == ""
         bork_type = "sry wut? i didn't hear your bork"
     else
