@@ -40,7 +40,6 @@ class Form
       response = "Your bork sounds like this: #{bork_type} \n"
     end
     response = "Your bork sounds like this: #{bork_type} \n"
-    puts response
   end
 
 end
