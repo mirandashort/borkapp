@@ -14,20 +14,20 @@ require 'sinatra'
   end
 
   post '/bork/' do
-    doggo_type = params[:doggo_type] || "Doggy"
-    redirect '/bork/me/'
+    doggo_type = params[:doggo_type]
+    redirect '/bork/:doggo_type/'
 
     erb :bork_form, :locals == { 'doggo_type' => doggo_type }
   end
 
-  get '/bork/me/' do
+  get '/bork/:doggo_type/' do
     erb :bork_flavor
   end
 
-  post '/bork/me/' do
-    doggo_type = params[:doggo_type] || "Doggy"
-    bork_type = params[:bork_type] || "woofs"
+  post '/bork/:doggo_type/' do
+    doggo_type = params[:doggo_type].to_s
+    bork_type = params[:bork_type].to_s
 
-    erb :bork_flavor, :locals == { 'doggo_type' => doggo_type, 'bork_type' => bork_type }
+    erb :bork_flavor, :locals == { 'response' => response, 'doggo_type' => doggo_type, 'bork_type' => bork_type }
 
 end

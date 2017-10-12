@@ -43,10 +43,4 @@ class Form
     puts response
   end
 
-    puts "What kind of doggo are you?"
-    doggo_type = gets.chomp.downcase
-
-    puts "Initializing bork..."
-    bork(doggo_type)
-
 end
