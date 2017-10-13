@@ -10,20 +10,24 @@ require 'sinatra'
   end
 
   get '/bork/' do
-    erb :bork_form
+    erb :"bork_form"
   end
 
   post '/bork/' do
     doggo_type = params[:doggo_type]
 
-    erb :bork_form, :locals == { 'doggo_type' => doggo_type }
+    redirect to('/bork?doggo_type=#{doggo_type}')
   end
 
-  get '/bork/#{doggo_type}/' do
+  get '/bork?doggo_type=#{doggo_type}' do
+    doggo_type = params[:doggo_type]
+    bork_type = params[:bork_type]
+    response = params[:response]
+
     erb :bork_flavor
   end
 
-  post '/bork/#{doggo_type}/' do
+  post '/bork?#{doggo_type}/' do
     doggo_type = params[:doggo_type]
     bork_type = params[:bork_type]
     response = params[:response]

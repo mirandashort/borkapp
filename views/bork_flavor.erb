@@ -8,9 +8,8 @@
      Initializing bork... <em style="color: #45b1e2; text-align: center">
     </h1>
 
-    <form action="/bork/#{doggo_type}/" method="post">
+    <form action="'/bork?doggo_type=#{doggo_type}'" method="post">
       <input name="method" type="hidden" value="<%= #{doggo_type} %>" />
-      <input name="bork_type" type="hidden" value="<%= #{bork_type} %>"/>
     </form>
 
     <p>
